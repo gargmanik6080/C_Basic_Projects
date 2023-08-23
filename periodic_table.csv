@@ -1,0 +1,119 @@
+Symbol,Element,AtomicMass,Type,AtomicRadius,Discoverer,NumberofShells
+H,Hydrogen,1.007,Nonmetal,0.79,Cavendish,1
+He,Helium,4.002,Noble Gas,0.49,Janssen,1
+Li,Lithium,6.941,Alkali Metal,2.1,Arfvedson,2
+Be,Beryllium,9.012,Alkaline Earth Metal,1.4,Vaulquelin,2
+B,Boron,10.811,Metalloid,1.2,Gay-Lussac,2
+C,Carbon,12.011,Nonmetal,0.91,Prehistoric,2
+N,Nitrogen,14.007,Nonmetal,0.75,Rutherford,2
+O,Oxygen,15.999,Nonmetal,0.65,Priestley/Scheele,2
+F,Fluorine,18.998,Halogen,0.57,Moissan,2
+Ne,Neon,20.18,Noble Gas,0.51,Ramsay and Travers,2
+Na,Sodium,22.99,Alkali Metal,2.2,Davy,3
+Mg,Magnesium,24.305,Alkaline Earth Metal,1.7,Black,3
+Al,Aluminum,26.982,Metal,1.8,Wshler,3
+Si,Silicon,28.086,Metalloid,1.5,Berzelius,3
+P,Phosphorus,30.974,Nonmetal,1.2,BranBrand,3
+S,Sulfur,32.065,Nonmetal,1.1,Prehistoric,3
+Cl,Chlorine,35.453,Halogen,0.97,Scheele,3
+Ar,Argon,39.948,Noble Gas,0.88,Rayleigh and Ramsay,3
+K,Potassium,39.098,Alkali Metal,2.8,Davy,4
+Ca,Calcium,40.078,Alkaline Earth Metal,2.2,Davy,4
+Sc,Scandium,44.956,Transition Metal,2.1,Nilson,4
+Ti,Titanium,47.867,Transition Metal,2,Gregor,4
+V,Vanadium,50.942,Transition Metal,1.9,   del Rio,4
+Cr,Chromium,51.996,Transition Metal,1.9,Vauquelin,4
+Mn,Manganese,54.938,Transition Metal,1.8,Gahn and Scheele,4
+Fe,Iron,55.845,Transition Metal,1.7,Prehistoric,4
+Co,Cobalt,58.933,Transition Metal,1.7,Brandt,4
+Ni,Nickel,58.693,Transition Metal,1.6,Cronstedt,4
+Cu,Copper,63.546,Transition Metal,1.6,Prehistoric,4
+Zn,Zinc,65.38,Transition Metal,1.5,Prehistoric,4
+Ga,Gallium,69.723,Metal,1.8,de Boisbaudran,4
+Ge,Germanium,72.64,Metalloid,1.5,Winkler,4
+As,Arsenic,74.922,Metalloid,1.3,Albertus Magnus,4
+Se,Selenium,78.96,Nonmetal,1.2,Berzelius,4
+Br,Bromine,79.904,Halogen,1.1,Balard,4
+Kr,Krypton,83.798,Noble Gas,1,Ramsay and Travers,4
+Rb,Rubidium,85.468,Alkali Metal,3,Bunsen and Kirchoff,5
+Sr,Strontium,87.62,Alkaline Earth Metal,2.5,Davy,5
+Y,Yttrium,88.906,Transition Metal,2.3,Gadolin,5
+Zr,Zirconium,91.224,Transition Metal,2.2,Klaproth,5
+Nb,Niobium,92.906,Transition Metal,2.1,Hatchett,5
+Mo,Molybdenum,95.96,Transition Metal,2,Scheele,5
+Tc,Technetium,98,Transition Metal,2,Perrier and Segr�,5
+Ru,Ruthenium,101.07,Transition Metal,1.9,Klaus,5
+Rh,Rhodium,102.906,Transition Metal,1.8,Wollaston,5
+Pd,Palladium,106.42,Transition Metal,1.8,Wollaston,5
+Ag,Silver,107.868,Transition Metal,1.8,Prehistoric,5
+Cd,Cadmium,112.411,Transition Metal,1.7,Stromeyer,5
+In,Indium,114.818,Metal,2,Reich and Richter,5
+Sn,Tin,118.71,Metal,1.7,Prehistoric,5
+Sb,Antimony,121.76,Metalloid,1.5,Early historic times,5
+Te,Tellurium,127.6,Metalloid,1.4,von Reichenstein,5
+I,Iodine,126.904,Halogen,1.3,Courtois,5
+Xe,Xenon,131.293,Noble Gas,1.2,Ramsay and Travers,5
+Cs,Cesium,132.905,Alkali Metal,3.3,Bunsen and Kirchoff,6
+Ba,Barium,137.327,Alkaline Earth Metal,2.8,Davy,6
+La,Lanthanum,138.905,Lanthanide,2.7,Mosander,6
+Ce,Cerium,140.116,Lanthanide,2.7,Berzelius,6
+Pr,Praseodymium,140.908,Lanthanide,2.7,von Welsbach,6
+Nd,Neodymium,144.242,Lanthanide,2.6,von Welsbach,6
+Pm,Promethium,145,Lanthanide,2.6,Marinsky et al.,6
+Sm,Samarium,150.36,Lanthanide,2.6,Boisbaudran,6
+Eu,Europium,151.964,Lanthanide,2.6,Demarcay,6
+Gd,Gadolinium,157.25,Lanthanide,2.5,de Marignac,6
+Tb,Terbium,158.925,Lanthanide,2.5,Mosander,6
+Dy,Dysprosium,162.5,Lanthanide,2.5,de Boisbaudran,6
+Ho,Holmium,164.93,Lanthanide,2.5,Delafontaine and Soret,6
+Er,Erbium,167.259,Lanthanide,2.5,Mosander,6
+Tm,Thulium,168.934,Lanthanide,2.4,Cleve,6
+Yb,Ytterbium,173.054,Lanthanide,2.4,Marignac,6
+Lu,Lutetium,174.967,Lanthanide,2.3,Urbain/ von Welsbach,6
+Hf,Hafnium,178.49,Transition Metal,2.2,Coster and von Hevesy,6
+Ta,Tantalum,180.948,Transition Metal,2.1,Ekeberg,6
+W,Wolfram,183.84,Transition Metal,2,J. and F. d'Elhuyar,6
+Re,Rhenium,186.207,Transition Metal,2,Noddack and Berg and Tacke,6
+Os,Osmium,190.23,Transition Metal,1.9,Tennant,6
+Ir,Iridium,192.217,Transition Metal,1.9,Tennant,6
+Pt,Platinum,195.084,Transition Metal,1.8,Ulloa/Wood,6
+Au,Gold,196.967,Transition Metal,1.8,Prehistoric,6
+Hg,Mercury,200.59,Transition Metal,1.8,Prehistoric,6
+Tl,Thallium,204.383,Metal,2.1,Crookes,6
+Pb,Lead,207.2,Metal,1.8,Prehistoric,6
+Bi,Bismuth,208.98,Metal,1.6,Geoffroy the Younger,6
+Po,Polonium,210,Metalloid,1.5,Curie,6
+At,Astatine,210,Noble Gas,1.4,Corson et al.,6
+Rn,Radon,222,Alkali Metal,1.3,Dorn,6
+Fr,Francium,223,Alkaline Earth Metal,,Perey,7
+Ra,Radium,226,Actinide,,Pierre and Marie Curie,7
+Ac,Actinium,227,Actinide,,Debierne/Giesel,7
+Th,Thorium,232.038,Actinide,,Berzelius,7
+Pa,Protactinium,231.036,Actinide,,Hahn and Meitner,7
+U,Uranium,238.029,Actinide,,Peligot,7
+Np,Neptunium,237,Actinide,,McMillan and Abelson,7
+Pu,Plutonium,244,Actinide,,Seaborg et al.,7
+Am,Americium,243,Actinide,,Seaborg et al.,7
+Cm,Curium,247,Actinide,,Seaborg et al.,7
+Bk,Berkelium,247,Actinide,,Seaborg et al.,7
+Cf,Californium,251,Actinide,,Seaborg et al.,7
+Es,Einsteinium,252,Actinide,,Ghiorso et al.,7
+Fm,Fermium,257,Actinide,,Ghiorso et al.,7
+Md,Mendelevium,258,Actinide,,Ghiorso et al.,7
+No,Nobelium,259,Actinide,,Ghiorso et al.,7
+Lr,Lawrencium,262,Actinide,,Ghiorso et al.,7
+Rf,Rutherfordium,261,Transactinide,,Ghiorso et al.,7
+Db,Dubnium,262,Transactinide,,Ghiorso et al.,7
+Sg,Seaborgium,266,Transactinide,,Ghiorso et al.,7
+Bh,Bohrium,264,Transactinide,,Armbruster and M�nzenberg,7
+Hs,Hassium,267,Transactinide,,Armbruster and M�nzenberg,7
+Mt,Meitnerium,268,Transactinide,,,7
+Ds ,Darmstadtium ,271,Transactinide,,,7
+Rg ,Roentgenium ,272,Transactinide,,,7
+Cn ,Copernicium ,285,Transactinide,,,7
+Nh,Nihonium,284,,,,7
+Fl,Flerovium,289,Transactinide,,,7
+Mc,Moscovium,288,,,,7
+Lv,Livermorium,292,Transactinide,,,7
+Ts,Tennessine,295,,,,7
+Og,Oganesson,294,Noble Gas,,,7
