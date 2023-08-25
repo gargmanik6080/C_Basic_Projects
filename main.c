@@ -14,5 +14,21 @@ struct element{
 };
 
 struct element getElement(int at_num){
-    
+    struct element ele1;
+    ele1.at_num = at_num;
+    FILE *ptr = fopen("periodic_table.csv", "r");
+    char c= fgetc(ptr);
+    int i = 0;
+    while (c != ',')
+    {
+        ele1.symbol[i++] = c;
+        c = fgetc(ptr);
+    }
+    fclose(ptr);
+    return ele1;
+}
+
+int main(){
+    struct element ele = getElement(1);
+    printf("%s \n", ele.symbol);
 }
