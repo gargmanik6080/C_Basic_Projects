@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+// Change the getEle(atnum) to get Ele(FILE* ptr) using gotoline
 struct element{
     int at_num;
     char symbol[3];
