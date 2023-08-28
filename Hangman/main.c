@@ -66,9 +66,12 @@ int main(){
     printf("3. All words and inputs are Case Insensitive. \n\n\n");
 
     // List of Websites to choose from
-    char websites[50][20] = {"google", "facebook", "youtube", "amazon", "twitter", "linkedin", "instagram", "reddit", "netflix", "ebay", "pinterest", "wikipedia", "yahoo", "microsoft", "apple", "bing", "tumblr", "quora",
-                        "imdb", "wordpress", "adobe", "craigslist", "github", "dropbox", "espn", "nytimes", "stackoverflow", "bbc", "weather", "hulu", "flickr", "spotify", "paypal", "yelp", "theguardian", "forbes",
-                        "cnn", "walmart", "buzzfeed", "dailymail", "msn", "nasa.gov", "walmart", "target", "cnet", "booking", "etsy", "huffpost", "washingtonpost", "nationalgeographic"};
+    char websites[50][20] = {"jssjpn", "ifgnassz", "esoyoan", "fkfhsr", "yclyynw", "plrznulr", "lrxyfjwfk",
+         "wnuuly", "rnyipld", "nafe", "tlrynwnxy", "clzltnulf", "efqss", "klgwsxsiy", "fttpn", "alrj", "yokapw",
+         "voswf", "lkua", "cswutwnxx", "fusan", "gwfljxplxy", "jlyqoa", "uwstasd", "nxtr", "reylknx",
+         "xyfgzsbnwipsc", "aag", "cnfyqnw", "qopo", "iplgzw", "xtsylie", "tfetfp", "enpt", "yqnjofwulfr",
+         "iswanx", "grr", "cfpkfwy", "aohhinnu", "uflpekflp", "kxr", "rfxf", "cfpkfwy", "yfwjny", "grny",
+         "asszlrj", "nyxe", "qoiitsxy", "cfxqlrjysrtsxy", "rfylsrfpjnsjwftqlg"};
 
     int rand_i = rand_int();
     char *selected = websites[rand_i];
