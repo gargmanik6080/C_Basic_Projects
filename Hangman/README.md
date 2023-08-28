@@ -31,9 +31,15 @@ The goal of this project is to develop a single-player Hangman game in the C pro
     <li>Allow the game to decrypt the name list only while in use, ensuring that it remains secure and tamper-proof.</li>
 </ul>
 
-### Top Scores
+### 4. Top Scores
 <ul>
     <li>Store the score top 10 player on the basis of Total Time Taken to guess the word. </li>
     <li>Display the leaderboard at the end of each game to show the player's ranking.</li>
-
 </ul>
+
+## How to Play
+<li>The user will be provided a Welcome Message along with the game rules. <br>
+<img src="rules.png">
+<li>The user will be prompted as to weather they are ready to Start the game or not. They will be promted this question till they reply with a 'Y' or 'y'.
+<li>When the User enter 'Y' or 'y', Their timer will start.
+<li> They will be shown the Initial Hangman Body and the word to be guessed as underscores instead of it's letters.

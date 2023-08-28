@@ -82,11 +82,15 @@ int main(){
 
     char* body = "";
     int mistakes = 0;
-    while(true){
+
+    // Prompting the User if they are Ready to play or not
+    char c = '\0';
+    while (c != 'y' && c != 'Y')
+    {
         printf("\nReady to start the game? Type Y or N :");
-        char c;
-        scanf("%c", &c);
-        if(c == 'y' || c == 'Y') break;
+        scanf("%c",&c);
+        int inputChar;
+        while ((inputChar = getchar()) != '\n' && inputChar != EOF) ;
     }
 
     // while (mistakes != 5 || checkWin() == 1)
@@ -94,4 +98,4 @@ int main(){
         displayBody(mistakes, body);
         checkWord(selected, '\0', guessed, len);
     }
-}
+    }
