@@ -152,7 +152,7 @@ int main(){
              printf("You guessed the word correctly!!!\n");
              break;
         }
-
+        if(mistakes == 6) break;
         printf("Guess a character: ");
         while ((inputChar = getchar()) == '\n') ;
     }
