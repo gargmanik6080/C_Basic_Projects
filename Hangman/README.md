@@ -38,8 +38,11 @@ The goal of this project is to develop a single-player Hangman game in the C pro
 </ul>
 
 ## How to Play
-<li>The user will be provided a Welcome Message along with the game rules. <br>
-<img src="rules.png">
-<li>The user will be prompted as to weather they are ready to Start the game or not. They will be promted this question till they reply with a 'Y' or 'y'.
-<li>When the User enter 'Y' or 'y', Their timer will start.
-<li> They will be shown the Initial Hangman Body and the word to be guessed as underscores instead of it's letters.
+<ul>
+<li> The user will be provided a Welcome Message along with the game rules. <br>
+<img src="assets/rules.png">
+<li> The user will be prompted as to weather they are ready to Start the game or not. They will be promted this question till they reply with a 'Y' or 'y'.
+<li> When the User enter 'Y' or 'y', Their timer will start.
+<li> They will be shown the Initial Hangman Body, Current Mistake (initialized to None) and the word to be guessed as underscores instead of it's letters.
+<li> 
+</ul>

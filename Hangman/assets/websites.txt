@@ -40,7 +40,7 @@
   "buzzfeed",
   "dailymail",
   "msn",
-  "nasa.gov",
+  "nasa",
   "walmart",
   "target",
   "cnet",
