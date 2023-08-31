@@ -55,7 +55,7 @@ int checkWord(char* selected, char c, char* guessed, int len){
     int flag = 0;
     for (int i = 0; i < len; i++)
     {
-        if(selected[i] == c){
+        if(selected[i] == c && guessed[i]=='_'){
             guessed[i] = c;
             flag++;
         }
@@ -100,9 +100,9 @@ void checkStatus(){
         while ((status = getchar()) != '\n' && status != EOF) ;
     }
 }
-int main(){
 
-    // Explaining the Rules
+// Explaining the Rules
+void printRules(){
     printf("\n\n");
     printf("\t\t\t\t\t\t\t Welcome to Hangman!!! \n\n");
     printf("Guess the word before you are Hanged!!!\n\n");
@@ -112,6 +112,10 @@ int main(){
     printf("3. All words and inputs are Case Insensitive. \n");
     printf("4. Repeated correct guess will be ignored whereas repeated wrong guess will be counted as a mistake.\n\n\n");
 
+}
+int main(){
+
+    printRules();
     // List of Websites to choose from
     char websites[50][20] = {"jssjpn", "ifgnassz", "esoyoan", "fkfhsr", "yclyynw", "plrznulr", "lrxyfjwfk",
          "wnuuly", "rnyipld", "nafe", "tlrynwnxy", "clzltnulf", "efqss", "klgwsxsiy", "fttpn", "alrj", "yokapw",
@@ -120,7 +124,8 @@ int main(){
          "iswanx", "grr", "cfpkfwy", "aohhinnu", "uflpekflp", "kxr", "rfxf", "cfpkfwy", "yfwjny", "grny",
          "asszlrj", "nyxe", "qoiitsxy", "cfxqlrjysrtsxy", "rfylsrfpjnsjwftqlg"};
 
-    int rand_i = rand_int();
+    // Initialising required variables
+    int rand_i = rand_int();            // Random int between 0 to 49
     char *selected = websites[rand_i];  // encrypted word
     int len = strlen(selected);
     selected[len] = '\0';
@@ -139,24 +144,33 @@ int main(){
     char inputChar = '\0';
     while (mistakes < 6)
     {
+        system("clear");
         int guessedChars = checkWord(selected, inputChar, guessed, len);
         if (guessedChars == 0 && inputChar != '\0'){
              falseGuess[mistakes] = inputChar;
              mistakes++;
         }
         displayBody(mistakes, body, falseGuess);
+
+        // Checking Win or loss
         // Checking win condition
+
         totalGuessedChars += guessedChars;
         if(totalGuessedChars == len+1) {
             // won();
              printf("You guessed the word correctly!!!\n");
              break;
         }
-        if(mistakes == 6) break;
+        if(mistakes == 6) {
+            printf("Oops!!! You failed to guess the word correctly. \nThe Word was : %s\n", selected);
+            break;
+        }
+
+        // If user didn't win or lose, ask for next guessed character
         printf("Guess a character: ");
         while ((inputChar = getchar()) == '\n') ;
     }
     if(mistakes == 6){
-        printf("Oops!!! You failed to guess the word correctly. \nThe Word was : %s\n", selected);
+        
     }
 }
