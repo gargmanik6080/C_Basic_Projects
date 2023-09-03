@@ -104,7 +104,7 @@ void checkStatus(){
 // Explaining the Rules
 void printRules(){
     printf("\n\n");
-    printf("\t\t\t\t\t\t\t Welcome to Hangman!!! \n\n");
+    printf("\t\t\t Welcome to Hangman!!! \n\n");
     printf("Guess the word before you are Hanged!!!\n\n");
     printf("\t RULES: \n\n");
     printf("1. The word to be guessed is a famous website name eg. 'google' .\n");
@@ -115,7 +115,7 @@ void printRules(){
 }
 
 void printWord(char* guessed, int len){
-        printf("\n\tCurrently Guessed Word : ");
+        printf("\n\tCurrently Guessed Word :  ");
         for (int i = 0; i < len; i++) printf("%c ", guessed[i]);
         printf("\n\n");
 }
@@ -184,6 +184,7 @@ int main(){
         // If user didn't win or lose, ask for next guessed character
         printf("Guess a character: ");
         scanf(" %c", &inputChar);
+        printf("\n");
     }
 
     // If the user won, printf time talen to guess the word
