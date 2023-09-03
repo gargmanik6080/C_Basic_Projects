@@ -15,7 +15,6 @@ The goal of this project is to develop a single-player Hangman game in the C pro
 ### 1. User Interface:
 <ul>
     <li>Display the Hangman figure using ASCII art to represent the stages of the hangman's construction.</li>
-    <li>Display the Hangman figure using ASCII art to represent the stages of the hangman's construction </li>
     <li>Show the list of guessed letters to prevent repeated guesses</li>
 </ul>
 

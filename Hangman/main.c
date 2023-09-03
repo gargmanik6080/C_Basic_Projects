@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include <stdbool.h>
-#include <ctype.h>
+#include <stdlib.h>   // For system() commands ans rand()
+#include <time.h>     // For execution time and srand()
+#include <string.h>   // For strlen()
+#include <ctype.h>    // to use tolower()
 
 // Generating a random int in the range 0 to 49
 int rand_int(){
@@ -51,17 +50,19 @@ void displayBody(int mistakes, char body[], char falseGuess[]){
 
 // 
 int checkWord(char* selected, char c, char* guessed, int len){
-    printf("\n\t");
+    printf("\n\tCurrently Guessed Word : ");
     int flag = 0;
     for (int i = 0; i < len; i++)
     {
-        if(selected[i] == c && guessed[i]=='_'){
+        if(selected[i] == c && guessed[i] == c) {
+            flag = -1;      // For repeated guess
+        }
+        if( flag>=0 && (selected[i] == c) && (guessed[i]=='_') ){
             guessed[i] = c;
             flag++;
         }
         printf("%c ", guessed[i]);
     }
-
     printf("\n\n");
     if(c == '\0') return 1;
     return flag;
@@ -114,7 +115,7 @@ void printRules(){
 
 }
 int main(){
-
+    system("clear");
     printRules();
     // List of Websites to choose from
     char websites[50][20] = {"jssjpn", "ifgnassz", "esoyoan", "fkfhsr", "yclyynw", "plrznulr", "lrxyfjwfk",
@@ -123,6 +124,7 @@ int main(){
          "xyfgzsbnwipsc", "aag", "cnfyqnw", "qopo", "iplgzw", "xtsylie", "tfetfp", "enpt", "yqnjofwulfr",
          "iswanx", "grr", "cfpkfwy", "aohhinnu", "uflpekflp", "kxr", "rfxf", "cfpkfwy", "yfwjny", "grny",
          "asszlrj", "nyxe", "qoiitsxy", "cfxqlrjysrtsxy", "rfylsrfpjnsjwftqlg"};
+
 
     // Initialising required variables
     int rand_i = rand_int();            // Random int between 0 to 49
@@ -145,17 +147,17 @@ int main(){
     while (mistakes < 6)
     {
         system("clear");
-        int guessedChars = checkWord(selected, inputChar, guessed, len);
-        if (guessedChars == 0 && inputChar != '\0'){
+        int guessedChars = checkWord(selected, inputChar, guessed, len); // Number of characters guessed correctly this turn, -1 for repeated letter
+        if (guessedChars == 0 && inputChar != '\0'){        // Condition won't be true for repeated guess
              falseGuess[mistakes] = inputChar;
              mistakes++;
         }
         displayBody(mistakes, body, falseGuess);
 
         // Checking Win or loss
-        // Checking win condition
 
-        totalGuessedChars += guessedChars;
+        // Checking win condition
+        if(guessedChars > 0)totalGuessedChars += guessedChars;
         if(totalGuessedChars == len+1) {
             // won();
              printf("You guessed the word correctly!!!\n");
@@ -168,9 +170,8 @@ int main(){
 
         // If user didn't win or lose, ask for next guessed character
         printf("Guess a character: ");
-        while ((inputChar = getchar()) == '\n') ;
+        scanf(" %c", &inputChar);
+
     }
-    if(mistakes == 6){
-        
-    }
+
 }
