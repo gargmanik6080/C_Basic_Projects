@@ -46,6 +46,7 @@ void displayBody(int mistakes, char body[], char falseGuess[]){
     // Printing Number of mistakes and All the false characters
     printf("\n\nNumber of Mistakes: %d\nIncorrect Guesses: ", mistakes);
     for (int i = 0; i < mistakes; i++) printf("%c ", falseGuess[i]);
+    if(mistakes == 0) printf("None");
     printf("\n");
 }
 
