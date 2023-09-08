@@ -11,7 +11,7 @@ int rand_int(){
     return rand() % 50;
 }
 
-// Displaying the Hangman Body Structure
+// Displaying the Hangman Body Structure, num of mistakes and false guesses
 void displayBody(int mistakes, char body[], char falseGuess[]){
     if (mistakes > 0) {
         body[0] = 'O';
@@ -65,7 +65,7 @@ int checkWord(char* selected, char c, char* guessed, int len){
             flag++;
         }
     }
-    if(c == '\0') return 1;
+    // if(c == '\0') return 1;
     return flag;
 }
 
@@ -163,18 +163,18 @@ int main(){
 
         system("clear");
         int guessedChars = checkWord(selected, inputChar, guessed, len); // Number of characters guessed correctly this turn, -1 for repeated letter
-        if (guessedChars == 0 && inputChar != '\0'){        // Condition won't be true for repeated guess
+        if (guessedChars == 0 && inputChar != '\0'){                     // Condition won't be true for repeated guess
              falseGuess[mistakes] = inputChar;
              mistakes++;
         }
-        displayBody(mistakes, body, falseGuess);
-        printWord(guessed, len);
+        displayBody(mistakes, body, falseGuess);  // displays hangman body, no. of mistakes and false guesses
+        printWord(guessed, len);                  // Prints the word guessed till this point
 
 
         // Checking win condition
-        if(guessedChars > 0)totalGuessedChars += guessedChars; // if not repeated guess, add number of word guessed this time to total
+        if(guessedChars > 0) totalGuessedChars += guessedChars; // if not repeated guess, add number of word guessed this time to total
         
-        if(totalGuessedChars == len+1) {
+        if(totalGuessedChars == len) {
              printf("You guessed the word correctly!!!\n");
              win_flag = 1;
              break;
@@ -192,7 +192,7 @@ int main(){
         printf("\n");
     }
 
-    // If the user won, printf time talen to guess the word
+    // If the user won, print time taken to guess the word
     if(win_flag == 1){
         time_t exec_time  = time(NULL) - start_time;
         printf("Time taken to guess the the word : %ld seconds\n\n", exec_time);
