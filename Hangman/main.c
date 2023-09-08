@@ -11,7 +11,7 @@ int rand_int(){
     return rand() % 50;
 }
 
-// Displaying the Hangman Body Structure
+// Displaying the Hangman Body Structure, num of mistakes and false guesses
 void displayBody(int mistakes, char body[], char falseGuess[]){
     if (mistakes > 0) {
         body[0] = 'O';
@@ -50,20 +50,22 @@ void displayBody(int mistakes, char body[], char falseGuess[]){
     printf("\n");
 }
 
-// 
+// Returns the number of characters guessed this time (-1 for a repeated guess)
+// Also updates the guessed characters in the "guessed" string
 int checkWord(char* selected, char c, char* guessed, int len){
     int flag = 0;
     for (int i = 0; i < len; i++)
     {
         if(selected[i] == c && guessed[i] == c) {
             flag = -1;      // For repeated guess
+            break;
         }
         if( flag>=0 && (selected[i] == c) && (guessed[i]=='_') ){
             guessed[i] = c;
             flag++;
         }
     }
-    if(c == '\0') return 1;
+    // if(c == '\0') return 1;
     return flag;
 }
 
@@ -72,7 +74,7 @@ void setWord(char* guessed, int len){
     for (int i = 0; i < len; i++) guessed[i] = '_';
 }
 
-// Decrypting the Selected Name
+// Decrypting the Selected Name (Monoalphabatic Cipher)
 void decrypt(char * s, int len){
     char alpha[26][2] = { { 'f', 'a' }, { 'a', 'b' }, { 'g', 'c' }, { 'u', 'd' }, { 'n', 'e' }, { 'i', 'f' }, { 'j', 'g' }, { 'q', 'h' }, { 'l', 'i' }, { 'm', 'j' },
                         { 'z', 'k' }, { 'p', 'l' }, { 'k', 'm' }, { 'r', 'n' }, { 's', 'o' }, { 't', 'p' }, { 'v', 'q' }, { 'w', 'r' }, { 'x', 's' }, { 'y', 't' },
@@ -134,7 +136,7 @@ int main(){
 
 
     // Initialising required variables
-    int rand_i = rand_int();            // Random int between 0 to 49
+    int rand_i = rand_int();            // Random int from 0 to 49
     char *selected = websites[rand_i];  // encrypted word
     int len = strlen(selected);
 
@@ -142,40 +144,42 @@ int main(){
     int totalGuessedChars = 0;
     selected[len] = '\0';
     char guessed[len];
-    char body[6];
+    char body[6];       // Hangman body
     char falseGuess[7];
-    bool win_flag = 0; // win status
+    bool win_flag = 0;  // win status
 
     decrypt(selected, len); // Decrypting the selected for internal use
     setWord(guessed, len);  // Initializing to underscores
 
 
     // Prompting the User if they are Ready to play or not
+    // Time shown at end will be calculated from after the player is ready
     checkStatus();
 
     time_t start_time = time(NULL);  // Getting the start time
+
     char inputChar = '\0';
-    while (mistakes < 6)
-    {
+    while (1){
+
         system("clear");
         int guessedChars = checkWord(selected, inputChar, guessed, len); // Number of characters guessed correctly this turn, -1 for repeated letter
-        if (guessedChars == 0 && inputChar != '\0'){        // Condition won't be true for repeated guess
+        if (guessedChars == 0 && inputChar != '\0'){                     // Condition won't be true for repeated guess
              falseGuess[mistakes] = inputChar;
              mistakes++;
         }
-        displayBody(mistakes, body, falseGuess);
-        printWord(guessed, len);
+        displayBody(mistakes, body, falseGuess);  // displays hangman body, no. of mistakes and false guesses
+        printWord(guessed, len);                  // Prints the word guessed till this point
 
-        // Checking Win or loss
 
         // Checking win condition
-        if(guessedChars > 0)totalGuessedChars += guessedChars;
-        if(totalGuessedChars == len+1) {
-             
+        if(guessedChars > 0) totalGuessedChars += guessedChars; // if not repeated guess, add number of word guessed this time to total
+        
+        if(totalGuessedChars == len) {
              printf("You guessed the word correctly!!!\n");
              win_flag = 1;
              break;
         }
+
         // Checking losing condition
         if(mistakes == 6) {
             printf("Oops!!! You failed to guess the word correctly. \nThe Word was : %s\n", selected);
@@ -188,7 +192,7 @@ int main(){
         printf("\n");
     }
 
-    // If the user won, printf time talen to guess the word
+    // If the user won, print time taken to guess the word
     if(win_flag == 1){
         time_t exec_time  = time(NULL) - start_time;
         printf("Time taken to guess the the word : %ld seconds\n\n", exec_time);
