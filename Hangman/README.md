@@ -52,3 +52,9 @@ The goal of this project is to develop a single-player Hangman game in the C pro
 
 ## Conclusion
 In conclusion, the Game aims to create an engaging and educational experience for users through the development of a single-player Hangman game in C programming. Through features like ASCII art for the hangman figure, encrypted website names, and a timer to maintain a competitive edge, The Hangman Game offers both enjoyment and learning opportunities for players.
+
+## Updates
+<ul>
+    <li> Curl (web crawler)
+    <li> accepting input -1 seprately
+</ul>
