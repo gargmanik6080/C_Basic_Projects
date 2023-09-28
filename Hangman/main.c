@@ -189,6 +189,7 @@ int main(){
         // If user didn't win or lose, ask for next guessed character
         printf("Guess a character: ");
         scanf(" %c", &inputChar);
+        inputChar = tolower(inputChar);
         printf("\n");
     }
 
