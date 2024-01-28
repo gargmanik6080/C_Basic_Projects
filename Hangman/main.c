@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>   // For system() commands ans rand()
+#include <stdlib.h>   // For system() commands and rand()
 #include <time.h>     // For execution time and srand()
 #include <string.h>   // For strlen()
 #include <ctype.h>    // to use tolower()
