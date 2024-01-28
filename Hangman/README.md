@@ -36,19 +36,54 @@ The goal of this project is to develop a single-player Hangman game in the C pro
     <li>Display the time taken to guess the word at the end to maintain a sense of competition.</li>
 </ul>
 
+## How to Use
+
+1. **Clone the Repository:**
+   - Start by cloning the repository to your local machine using the following command:
+     ```
+     git clone <repository-url>
+     ```
+
+2. **Navigate to the Project Directory:**
+   - Change into the project directory by running the command:
+     ```
+     cd <project-directory>
+     ```
+
+3. **Fetch the Required Files:**
+   - If the `main.c` file is not directly visible in the project directory, navigate to the appropriate subdirectory where it is located.
+
+4. **Compile the Code:**
+   - Use the appropriate compiler command to compile the `main.c` file. For example, with GCC:
+     ```
+     gcc main.c -o main
+     ```
+
+5. **Execute the Compiled File:**
+   - After successful compilation, execute the compiled file to run the program:
+     ```
+     ./main
+     ```
+
 ## How to Play
 <ul>
     <li> The user will be provided a Welcome Message along with the game rules. <br>
-    <img src="assets/rules.png">
+    <img src="assets/README Images/rules.png">
     <li> The user will be prompted as to weather they are ready to Start the game or not. They will be promted this question till they reply with a 'Y' or 'y'.
     <li> When the User enter 'Y' or 'y', Their timer will start.
     <li> They will be shown the Initial Hangman Body, Current Number of Mistake (initialized to 0), Incorrect guesses (initialized to "None") and the word to be guessed as underscores instead of it's letters.
-    <img src="assets/prompt.png">
+    <img src="assets/README Images/prompt.png">
     <li> The user needs to type in a character that they think could be a part of that word.
     <li>The game continues till the user either guesses the word or exhausts their attempts.
     <li>If the user win they will be shown the following message.
-    <img src="assets/win.png">
+    <img src="assets/README Images/win.png">
 </ul>
 
 ## Conclusion
 In conclusion, the Game aims to create an engaging and educational experience for users through the development of a single-player Hangman game in C programming. Through features like ASCII art for the hangman figure, encrypted website names, and a timer to maintain a competitive edge, The Hangman Game offers both enjoyment and learning opportunities for players.
+
+## Updates
+<ul>
+    <li> Curl (web crawler)
+    <li> accepting input -1 seprately
+</ul>
