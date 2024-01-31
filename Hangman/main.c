@@ -108,10 +108,10 @@ void checkStatus(){
 void printRules(){
     printf("\n\n");
     printf("\t\t\t Welcome to Hangman!!! \n\n");
-    printf("Guess the word before you are Hanged!!!\n\n");
+    printf("\t\tGuess the word before you are Hanged!!!\n\n\n");
     printf("\t RULES: \n\n");
     printf("1. The word to be guessed is a famous website name eg. 'google' .\n");
-    printf("2. You can make 6 mistakes after which you will be hanged completly. \n");
+    printf("2. You are allowed to make 5 mistakes after which you will be hanged completly. \n");
     printf("3. All words and inputs are Case Insensitive. \n");
     printf("4. Repeated correct guess will be ignored whereas repeated wrong guess will be counted as a mistake.\n\n\n");
 
