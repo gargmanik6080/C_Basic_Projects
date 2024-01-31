@@ -64,7 +64,7 @@ The goal of this project is to develop a single-player Hangman game in the C pro
      ```
      ./main
      ```
-
+ 
 ## How to Play
 <ul>
     <li> The user will be provided a Welcome Message along with the game rules. <br>
